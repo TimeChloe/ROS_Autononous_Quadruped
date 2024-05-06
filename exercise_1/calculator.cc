@@ -6,11 +6,9 @@
 #include <stdexcept>
 
 
-class MyMath {
- private:
-  const double kPi = 3.14156;
 
-public:
+  double kPi = 3.14156;
+
   double Sum_(double a, double b) {
         return a + b;
     }
@@ -75,5 +73,3 @@ public:
   double Sin_(double a) {
         return std::sin(a);
     }
-
-};
