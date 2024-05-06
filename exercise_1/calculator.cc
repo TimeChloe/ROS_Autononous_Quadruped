@@ -9,26 +9,26 @@
 
   double kPi = 3.14156;
 
-  double Sum_(double a, double b) {
+  double MyMath::Sum_(double a, double b) {
         return a + b;
     }
 
-  double Square_(double a) {
+  double MyMath::Square_(double a) {
         return a * a;
     }
 
-  double Subtract_(double a, double b) {
+  double MyMath::Subtract_(double a, double b) {
         return a - b;
     }
 
-  double Divide_(double a, double b) {
+  double MyMath::Divide_(double a, double b) {
         if (b == 0) {
             throw std::invalid_argument("Division by zero is not allowed");
         }
         return a / b;
     }
 
-  double Sum_(std::vector<double> vec) {
+  double MyMath::Sum_(std::vector<double> vec) {
         double sum = 0;
         for (double num : vec) {
             sum += num;
@@ -36,15 +36,15 @@
         return sum;
     }
 
-  double CircleSurface_(double radius) {
+  double MyMath::CircleSurface_(double radius) {
         return kPi * radius * radius;
     }
 
-  double CircleCircumference_(double radius) {
+  double MyMath::CircleCircumference_(double radius) {
         return 2 * kPi * radius;
     }
 
-  std::vector<double> VectorProduct_(std::vector<double> a, std::vector<double> b) {
+  std::vector<double> MyMath::VectorProduct_(std::vector<double> a, std::vector<double> b) {
         if (a.size() != 3 || b.size() != 3) {
             throw std::invalid_argument("Vectors must have size 3 for cross product");
         }
@@ -55,7 +55,7 @@
         return product;
     }
 
-  std::vector<std::vector<double>> MatrixMultiplication_(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b) {
+  std::vector<std::vector<double>> MyMath::MatrixMultiplication_(std::vector<std::vector<double>> a, std::vector<std::vector<double>> b) {
         if (a[0].size() != 2 || a[1].size() != 2 || b[0].size() != 2 || b[1].size() != 2) {
             throw std::invalid_argument("Matrices must be 2x2 for multiplication");
         }
@@ -70,6 +70,6 @@
         return product;
     }
 
-  double Sin_(double a) {
+  double MyMath::Sin_(double a) {
         return std::sin(a);
     }
