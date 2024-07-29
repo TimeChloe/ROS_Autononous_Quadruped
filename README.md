@@ -42,28 +42,28 @@ In this project, we have already completed:
 1. Git clone the code from our [repository](https://gitlab.lrz.de/00000000014B649F/autonomous_quadruped.git).
 2. Run 
    ```
-   cd ~/autonomous_quadruped
+   cd intro2ros_2024
    ```
-3. Run 
+### 2. Download the external ROS package 📦
+1. To install the external ROS packages, please run the following commands:
+   ```
+   chmod +x install_ros_packages.sh
+   sudo ./install_ros_packages.sh
+   ```
+2. Run 
    ```
    catkin build
    ```
-4. Download Quadruped.zip from this [link](https://syncandshare.lrz.de/getlink/fiLvgiTXetubiN1i4PRjuR/).
-5. Unzip the Unity file and copy the files to autonomous_quadruped/devel/lib/simulation/
-6. Run 
+3.. Download Quadruped.zip from this [link](https://syncandshare.lrz.de/getlink/fiLvgiTXetubiN1i4PRjuR/).
+4.. Unzip the Unity file and copy the files to autonomous_quadruped/devel/lib/simulation/
+5.. Run 
    ```
-   cd PATH/TO/autonomous_quadruped/devel/lib/simulation
+   cd PATH/TO/intro2ros_2024/devel/lib/simulation
    ```
    ```
    chmod +x RoboDog_Build.x86_64
    ```
 
-### 2. Download the external ROS package 📦
-To install the external ROS packages, please run the following commands:
-   ```
-   chmod +x install_ros_packages.sh
-   sudo ./install_ros_packages.sh
-   ```
 
 ## Usage 🎮
 To use this package, follow the steps below:
