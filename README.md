@@ -39,7 +39,7 @@ In this project, we have already completed:
 ## Installation ⚙️
 ### 1. Download the project 💾
 
-1. Git clone the code from our [repository](https://gitlab.lrz.de/00000000014B649F/autonomous_quadruped.git).
+1. Git clone the code from our [repository](https://gitlab.lrz.de/00000000014B27FE/intro2ros_2024.git).
 2. Run 
    ```
    cd intro2ros_2024
@@ -69,12 +69,37 @@ In this project, we have already completed:
 To use this package, follow the steps below:
 
 1. **Launch the simulation** 🚀
-   - Navigate to the simulation directory and execute the simulator.
 
-2. **Run the control algorithms** 🔧
-   - Use the ROS framework to initiate the control scripts.
+   Setup up your ROS Environment
+   ```
+   source /devel/setup.bash
+   ```
+   Controller: 
+   
+      1)Offline Results: This version uses the controller_node with PID control. It evaluates the performance of the basic controller settings.
 
-3. **Monitor and adjust parameters** 🛠️
+      run 
+      ```
+      roslaunch simulation_offline.launch
+      ```
+      2)Online Results: This version uses the controller_node without PID control. It assesses the improved performance with real-time PID adjustments.
+
+      run 
+      ```
+      roslaunch simulation_online.launch
+      ```
+   If you want to change the controller, please change the launch file to
+    ```
+    <node pkg="controller_pkg" type="controller_node_PID" name="controller_node_PID" output="screen" />
+    ```
+   or to
+   ```
+   <node pkg="controller_pkg" type="controller_node_PID" name="controller_node" output="screen" />
+   ```
+
+
+
+2. **Monitor and adjust parameters** 🛠️
    - Use provided tools to monitor the robot's performance and adjust parameters for optimal behavior.
 
 ## Components 🧩
