@@ -1,93 +1,135 @@
-# intro2ros_2024
 
+# AutonomousQuadruped Project 🤖
 
+## Table of Contents 📚
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Components](#components)
+6. [Contributing](#contributing)
+7. [Contact](#contact)
 
-## Getting started
+## Introduction 📝
+AutonomousQuadruped is a project focused on developing a quadruped robot capable of navigating complex environments autonomously. This is a course project for Introduction to ROS. It leverages advanced technologies in perception, path planning, and control systems to achieve robust and coordinated motion.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+![Simulation Environment](image_readme/readme_simulation.png "AutonomousQuadruped Simulation")
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+The details about this course you can find in following website:
+https://www.moodle.tum.de/course/info.php?id=88252&lang=en
 
-## Add your files
+## Features ⭐
+In this project, we have already completed:
+- ✅ **Perception Pipeline**
+- 🛤️ **Path Planning**
+- 📈 **Trajectory Planning**
+- 🔄 **Coordinated Motion Planning**
+- 🚧 **Obstacle Navigation**
+- 🎛️ **PID Control Integration**
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+**You can find the result below: (Please click it!)**
 
-```
-cd existing_repo
-git remote add origin https://gitlab.lrz.de/00000000014B27FE/intro2ros_2024.git
-git branch -M main
-git push -uf origin main
-```
+<a href="https://www.youtube.com/watch?v=6ABGK-RzElg">
+  <img src="https://img.youtube.com/vi/6ABGK-RzElg/0.jpg" alt="Video Title" style="width:200%;">
+</a>
 
-## Integrate with your tools
+- **Offline Control Completion Time:** 7 minutes 5 seconds 🎉😄
+- **Online Control Completion Time:** 7 minutes 18 seconds 🎉😊
 
-- [ ] [Set up project integrations](https://gitlab.lrz.de/00000000014B27FE/intro2ros_2024/-/settings/integrations)
+## Installation ⚙️
+### 1. Download the project 💾
 
-## Collaborate with your team
+1. Git clone the code from our [repository](https://gitlab.lrz.de/00000000014B649F/autonomous_quadruped.git).
+2. Run 
+   ```
+   cd ~/autonomous_quadruped
+   ```
+3. Run 
+   ```
+   catkin build
+   ```
+4. Download Quadruped.zip from this [link](https://syncandshare.lrz.de/getlink/fiLvgiTXetubiN1i4PRjuR/).
+5. Unzip the Unity file and copy the files to autonomous_quadruped/devel/lib/simulation/
+6. Run 
+   ```
+   cd PATH/TO/autonomous_quadruped/devel/lib/simulation
+   ```
+   ```
+   chmod +x RoboDog_Build.x86_64
+   ```
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### 2. Download the external ROS package 📦
+To install the external ROS packages, please run the following commands:
+   ```
+   chmod +x install_ros_packages.sh
+   sudo ./install_ros_packages.sh
+   ```
 
-## Test and Deploy
+## Usage 🎮
+To use this package, follow the steps below:
 
-Use the built-in continuous integration in GitLab.
+1. **Launch the simulation** 🚀
+   - Navigate to the simulation directory and execute the simulator.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+2. **Run the control algorithms** 🔧
+   - Use the ROS framework to initiate the control scripts.
 
-***
+3. **Monitor and adjust parameters** 🛠️
+   - Use provided tools to monitor the robot's performance and adjust parameters for optimal behavior.
 
-# Editing this README
+## Components 🧩
+### Perception
+- Uses sensors and algorithms to understand the environment.
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+### Path Planning
+- Offline and online strategies for navigating the environment.
 
-## Suggestions for a good README
+<p align="center">
+  <img src="image_readme/offline_map.png" alt="Offline Path" style="width:45%; margin-right:10px;">
+  <img src="image_readme/online_pathplanning.png" alt="Online Path" style="width:45%;">
+</p>
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+### Trajectory Planning
+- Generates smooth and feasible movement paths.
 
-## Name
-Choose a self-explaining name for your project.
+### Coordinated Motion Planning
+- Ensures synchronized and coordinated movements.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Obstacle Navigation
+- Capabilities to navigate and overcome obstacles.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+<p align="center">
+  <img src="image_readme/obstacle1.png" alt="obstacle"><br>
+  <b>Obstacle Example</b>
+</p>
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### PID Control Integration
+- Implements precise control mechanisms for stability.
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+## Contributing 🤝
+- **Perception**: Yue Zhang
+- **Planning**:
+  - **Offline Path Planning**: Guangyan Wu
+  - **Offline Trajectory Generation**: Mengfei Fan
+  - **Online Path Planning and Trajectory Generation**: Yue Zhang
+- **Control**:
+  - **Offline Controller and Online Controller**: Mengfei Fan
+  - **Offline Controller and PID Control**: Xinlong Wang
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+We welcome contributions to improve this project. To contribute, please follow these steps:
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+1. **Fork the Repository** 🔄: Start by forking the project repository to your GitHub account.
+2. **Create a Branch** 🌿: Create a new branch for your feature or bug fix.
+3. **Make Changes** 🛠️: Implement your changes and ensure they adhere to the project’s coding standards.
+4. **Commit Your Changes** 💾: Write a clear and descriptive commit message for your changes.
+5. **Submit a Pull Request** 📬: Submit a pull request to the main repository. Please include a detailed description of your changes and any related issue numbers.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+For more detailed guidelines, please refer to the `CONTRIBUTING.md` file in the repository.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## Contact 📧
+For more information, please contact:
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- **Zhang, Yue**: yue22.zhang@tum.de
+- **Fan, Mengfei**: ge85red@mytum.de
+- **Wang, Xinlong**: ge89yah@mytum.de
+- **Wu, Guangyan**: ge92dam@mytum.de

@@ -1,0 +1,41 @@
+# Ignore build directories
+/build/
+/devel/
+/build_isolated/
+/devel_isolated/
+
+# Ignore logs
+/log/
+/logs/
+
+# Ignore configuration files
+/.vscode/
+/.idea/
+/.settings/
+
+# Ignore dependency management directories
+/.catkin_tools/
+/.install/
+
+# Ignore node-specific files
+*.pyc
+*.o
+*.swp
+*~ 
+*.bak
+*.tmp
+
+# Ignore compiled shared objects
+*.so
+
+# Ignore generated files and directories
+/CMakeFiles/
+/cmake_install.cmake
+/CMakeCache.txt
+
+# Ignore specific ROS-related files
+/rosbuild_ws/
+/ros_env.sh
+
+# Ignore test results
+/test_results/
