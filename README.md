@@ -72,6 +72,7 @@ To use this package, follow the steps below:
 
    Setup up your ROS Environment
    ```
+   cd PATH/TO/intro2ros_2024
    source /devel/setup.bash
    ```
    Controller: 
