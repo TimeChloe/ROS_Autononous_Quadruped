@@ -81,13 +81,13 @@ To use this package, follow the steps below:
 
       run 
       ```
-      roslaunch simulation_offline.launch
+      roslaunch simulation simulation_offline.launch
       ```
       2)Online Results: This version uses the controller_node without PID control. It assesses the improved performance with real-time PID adjustments.
 
       run 
       ```
-      roslaunch simulation_online.launch
+      roslaunch simulation simulation_online.launch
       ```
    If you want to change the controller, please change the launch file to
     ```
