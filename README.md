@@ -1,6 +1,6 @@
 
 # AutonomousQuadruped Project 🤖
-This is the Course Project for Introduction to ROS in Technical University of Munich.
+This is the Course Project for Introduction to ROS at Technical University of Munich.
 
 ## Table of Contents 📚
 1. [Introduction](#introduction)
